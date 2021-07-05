@@ -1,0 +1,66 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+        <div class="page-left">
+            <div class="card-container">
+                <div class="card">
+                    <div class="bank"><i class="mastercard-icon"></i></div>
+                    <div class="chip"></div>
+                    <div class="number"><p id="numberPreview">0000 0000 0000 0000</p></div>
+                    <div class="expiration" id="expirePreview">01/20</div>
+                    <div class="name" id="namePreview">JOHN DOE</div>
+                </div>
+                <div class="card back">
+                    <div class="magnetic"></div>
+                    <div class="inline">
+                        <div class="signature"></div>
+                        <div class="cvv" id="cvvPreview">***</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="page-right">
+            <form action="">
+                <label for="">Name</label><input placeholder="John Doe" id="name" type="text" oninput="updateName()"><br>
+                <label for="">Card number</label><input placeholder="1234567891011121" maxlength="19" id="number" type="text" oninput="updateNumber()"><br>
+                <label for="">Expiration</label>
+                <select onchange="updateExpiration()" name='expireMM' id='expireMM' selected="01">
+                    <option value='01'>01</option>
+                    <option value='02'>02</option>
+                    <option value='03'>03</option>
+                    <option value='04'>04</option>
+                    <option value='05'>05</option>
+                    <option value='06'>06</option>
+                    <option value='07'>07</option>
+                    <option value='08'>08</option>
+                    <option value='09'>09</option>
+                    <option value='10'>10</option>
+                    <option value='11'>11</option>
+                    <option value='12'>12</option>
+                </select> 
+                <select onchange="updateExpiration()" name='expireYY' id='expireYY' selected="20">
+                    <option value='20'>20</option>
+                    <option value='21'>21</option>
+                    <option value='22'>22</option>
+                    <option value='23'>23</option>
+                    <option value='24'>24</option>
+                    <option value='25'>25</option>
+                    <option value='26'>26</option>
+                    <option value='27'>27</option>
+                    <option value='28'>28</option>
+                    <option value='29'>29</option>
+                    <option value='30'>30</option>
+                    <option value='31'>31</option>
+                    <option value='32'>32</option>
+                    <option value='33'>33</option>
+                    <option value='34'>34</option>
+                    <option value='35'>35</option>
+                </select> <br>
+                <label for="">cvv</label><input placeholder="123" id="cvv" type="text" oninput="updateCvv()" maxlength="4"><br>
+            </form>
+        </div>
+        <script src="./js/livePreview.js"></script>
+    </body>
+</html>

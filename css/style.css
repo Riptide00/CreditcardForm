@@ -1,0 +1,147 @@
+@font-face {
+    font-family: 'CreditCard';
+    src: url('../fonts/CreditCard.eot'); /* IE9 Compat Modes */
+    src: url('../fonts/CreditCard.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+        url('../fonts/CreditCard.woff2') format('woff2'), /* Super Modern Browsers */
+        url('../fonts/CreditCard.woff') format('woff'), /* Pretty Modern Browsers */
+        url('../fonts/CreditCard.ttf')  format('truetype'), /* Safari, Android, iOS */
+        url('../fonts/CreditCard.svg#svgFontName') format('svg'); /* Legacy iOS */
+}
+
+body {
+    display: flex;
+    flex-direction: row;
+}
+
+.page-left {
+    
+}
+
+.page-right {
+
+}
+
+.card {
+    font-family: "CreditCard", Arial, sans-serif;
+    background-color: #90AEDC;
+    width: 525px;
+    height: 300px;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+.bank {
+    text-align: right;
+    padding-right: 30px;
+    height: 90px;
+    font-size: 70px;
+    margin-top: 15px;
+}
+
+.chip {
+    background-color: #F5D78D;
+    width: 70px;
+    height: 50px;
+    border-radius: 10px;
+    margin-left: 30px;
+}
+
+.number {
+    margin-left: 30px;
+    font-size: 20px;
+}
+
+.expiration {
+    text-align: center;
+    font-size: 15px;
+}
+
+.name {
+    margin-left: 30px;
+    font-size: 30px;
+}
+
+.magnetic {
+    margin-top: 20px;
+    height: 50px;
+    width: 100%;
+    background-color: #000000;
+}
+
+.inline {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    margin-left: 30px;
+}
+
+.signature {
+    height: 40px;
+    width: 200px;
+    background-color: #ffffff;
+}
+
+.cvv {
+    font-family: Arial, sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    height: 40px;
+    width: 60px;
+    background-color: #ffffff;
+    margin-left: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+input {
+    border: 1px solid grey;
+    border-radius: 2px;
+}
+
+input:focus {
+    border: 1px solid grey;
+}
+
+/* actual mastercard icon
+ *
+ * see spec here: 
+ *
+ * https://brand.mastercard.com/brandcenter/mastercard-brand-mark.html
+ *
+*/
+
+.mastercard-icon {
+    display: inline-block;
+    height: 1em;
+    isolation: isolate;
+    position: relative;
+    line-height: 1em;
+    vertical-align: middle;
+    width: 1.611em;
+}
+
+.mastercard-icon::before,
+.mastercard-icon::after {
+    border-radius: .5em;
+    content: "";
+    display: inline-block;
+    height: 1em;
+    position: absolute;
+    width: 1em;
+}
+
+.mastercard-icon::before {
+    background-color: #eb001b;
+    left: 0;
+    top: 0;
+}
+
+.mastercard-icon::after {
+    background-color: #f79e1b;
+    mix-blend-mode: hard-light;
+    right: 0;
+    top: 0;
+}
