@@ -1,18 +1,20 @@
 <html>
     <head>
-        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="./css/style.css">
     </head>
     <body>
-        <div class="page-left">
+        <div class="left">
             <div class="card-container">
                 <div class="card">
-                    <div class="bank"><i class="mastercard-icon"></i></div>
-                    <div class="chip"></div>
+                    <div class="inline">
+                        <div class="chip"></div>
+                        <div class="bank"><i class="mastercard-icon"></i></div>
+                    </div>
                     <div class="number"><p id="numberPreview">0000 0000 0000 0000</p></div>
                     <div class="expiration" id="expirePreview">01/20</div>
                     <div class="name" id="namePreview">JOHN DOE</div>
                 </div>
-                <div class="card back">
+                <div id="back" class="card back hidden">
                     <div class="magnetic"></div>
                     <div class="inline">
                         <div class="signature"></div>
@@ -21,11 +23,11 @@
                 </div>
             </div>
         </div>
-        <div class="page-right">
+        <div class="right">
             <form action="">
-                <label for="">Name</label><input placeholder="John Doe" id="name" type="text" oninput="updateName()"><br>
-                <label for="">Card number</label><input placeholder="1234567891011121" maxlength="19" id="number" type="text" oninput="updateNumber()"><br>
-                <label for="">Expiration</label>
+                <label>Name</label><input placeholder="John Doe" id="name" type="text" oninput="updateName()"><br>
+                <label>Card number</label><input placeholder="1234567891011121" maxlength="19" id="number" type="text" oninput="updateNumber()"><br>
+                <label>Expiration</label>
                 <select onchange="updateExpiration()" name='expireMM' id='expireMM' selected="01">
                     <option value='01'>01</option>
                     <option value='02'>02</option>
@@ -58,9 +60,9 @@
                     <option value='34'>34</option>
                     <option value='35'>35</option>
                 </select> <br>
-                <label for="">cvv</label><input placeholder="123" id="cvv" type="text" oninput="updateCvv()" maxlength="4"><br>
+                <label>cvv</label><input onblur="toggleBackside()" onfocus="toggleBackside()" placeholder="123" id="cvv" type="text" oninput="updateCvv()" maxlength="4"><br>
             </form>
+            <script src="./js/livePreview.js"></script>
         </div>
-        <script src="./js/livePreview.js"></script>
     </body>
 </html>

@@ -67,3 +67,19 @@ function updateCvv() {
     document.getElementById("cvvPreview").innerHTML = "*".repeat(val.length);
     console.log(document.getElementById("cvv").value);
 }
+
+var cvv = document.getElementById('cvv');
+var backside = document.getElementById('back');
+
+function toggleBackside() {
+    if (cvv === document.activeElement) {
+        //cvv Has Focus
+        console.log("showing backside")
+        backside.classList.remove("hidden");
+        backside.classList.add("show");
+    } else {
+        backside.classList.add("hidden");
+        backside.classList.remove("show");
+        console.log("Hiding backside")
+    }
+}
